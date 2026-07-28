@@ -5,6 +5,24 @@
 Версия: `0.2.3`  
 Runtime-файл: `xray-server-wizard.sh`
 
+## NaiveProxy Server Wizard
+
+Отдельный мастер NaiveProxy находится в папке
+[`NaiveProxy`](NaiveProxy/README.md). Он не зависит от Xray Server Wizard и
+устанавливается отдельным сервисом.
+
+Быстрая установка на Ubuntu:
+
+```bash
+sudo apt-get update && sudo apt-get install -y curl
+curl -fL https://raw.githubusercontent.com/RustForNew/xray-server-wizard/main/NaiveProxy/naiveproxy-server-wizard.sh -o naiveproxy-server-wizard.sh
+chmod 700 naiveproxy-server-wizard.sh
+sudo bash ./naiveproxy-server-wizard.sh
+```
+
+Прямая загрузка установщика:
+[`naiveproxy-server-wizard.sh`](https://raw.githubusercontent.com/RustForNew/xray-server-wizard/main/NaiveProxy/naiveproxy-server-wizard.sh).
+
 ## Требования
 
 - Ubuntu Server 22.04;

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "wizard_version": "0.1.0",
+  "server": {
+    "domain": "proxy.example.com",
+    "listen_port": 443,
+    "http3": true,
+    "auto_https_redirects": true
+  },
+  "tls": {
+    "mode": "acme",
+    "acme_email": "admin@example.com",
+    "certificate": "",
+    "private_key": ""
+  },
+  "decoy": {
+    "mode": "static",
+    "upstream": "",
+    "redirect": "",
+    "title": "Web Service",
+    "root": "/var/www/naiveproxy-wizard"
+  },
+  "privacy": {
+    "probe_mode": "fallthrough",
+    "probe_secret": "",
+    "hide_ip": true,
+    "hide_via": true,
+    "exclude_activity_error_log": true
+  },
+  "pac": {
+    "enabled": false,
+    "path": ""
+  },
+  "egress": {
+    "target_ports_mode": "web",
+    "target_ports": [
+      80,
+      443
+    ],
+    "acl_mode": "hardened",
+    "acl_custom": [],
+    "upstream": "",
+    "dial_timeout": "30s",
+    "max_idle_conns": 256,
+    "max_idle_conns_per_host": 8
+  },
+  "firewall": {
+    "manage_ufw": true,
+    "open_http_port": true
+  },
+  "install_mode": "manifest",
+  "server_build_mode": "source_patched"
+}
