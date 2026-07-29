@@ -16,7 +16,8 @@
 Проверенная среда:
 
 - чистый Ubuntu Server 22.04 x86_64;
-- домен `test.ge-rfn.life`, DNS-only;
+- отдельный тестовый домен с прямой DNS-записью на VPS, без CDN или внешнего
+  reverse proxy;
 - Caddy 2.11.4;
 - закреплённый `klzgrad/forwardproxy` commit;
 - NaiveProxy client 150.0.7871.63 для Windows x64;
